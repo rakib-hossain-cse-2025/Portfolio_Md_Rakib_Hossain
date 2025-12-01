@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects - Md Rakib Hossain</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        body {
+            background: linear-gradient(to bottom, #E0F2FF, #FFFFFF);
+            color: #1F2937;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Light Glass Card */
+        .project-card {
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 16px;
+            padding: 20px;
+            transition: 0.3s;
+            backdrop-filter: blur(12px);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        /* Back Button */
+        .btn-back {
+            border: 1px solid #94a3b8;
+            padding: 10px 22px;
+            border-radius: 8px;
+            transition: .3s;
+            color: #475569;
+        }
+
+        .btn-back:hover {
+            border-color: #3B82F6;
+            color: #3B82F6;
+        }
+
+        /* Header Glass Effect */
+        .header-glass {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="fixed w-full z-50 header-glass">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <h1 class="text-2xl font-bold text-primary">Md Rakib Hossain</h1>
+
+            <a href="index.html" class="btn-back">← Back to Home</a>
+        </nav>
+    </header>
+
+    <!-- Page Heading -->
+    <section class="pt-32 pb-10 text-center">
+        <h1 class="text-4xl font-bold text-gray-800">My Projects</h1>
+        <p class="text-gray-600 mt-2">Here are some demo projects I have built</p>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="container mx-auto px-6 pb-20">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+            <!-- Project 1 -->
+            <div class="project-card">
+                <img src="student_management.PNG" class="w-full rounded-lg mb-4" alt="">
+                
+                <h2 class="text-xl font-semibold mb-2 text-gray-800">
+                    Student Management System
+                </h2>
+
+                <p class="text-gray-600 mb-4">
+                    Fully responsive student management portfolio website built with HTML, CSS, PHP, Java & animations.
+                </p>
+
+                <a href="#" class="text-primary font-medium hover:underline">
+                    View Project →
+                </a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <img src="blood.png" class="w-full rounded-lg mb-4" alt="">
+                
+                <h2 class="text-xl font-semibold mb-2 text-gray-800">
+                    Blood Donation System
+                </h2>
+
+                <p class="text-gray-600 mb-4">
+                    Clean and modern blood donation management system with filtering and smooth UI animations.
+                </p>
+
+                <a href="#" class="text-primary font-medium hover:underline">
+                    View Project →
+                </a>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <img src="car.png" class="w-full rounded-lg mb-4" alt="">
+                
+                <h2 class="text-xl font-semibold mb-2 text-gray-800">
+                    Dashboard Admin Panel
+                </h2>
+
+                <p class="text-gray-600 mb-4">
+                    Fully responsive Car Rental Dashboard with charts, tables, and admin UI features.
+                </p>
+
+                <a href="#" class="text-primary font-medium hover:underline">
+                    View Project →
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>

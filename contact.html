@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Md Rakib Hossain</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to bottom, #E0F2FF, #FFFFFF);
+            color: #1F2937;
+        }
+
+        /* Light Glass Card */
+        .glass-box {
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 18px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(12px);
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .glass-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Form Inputs */
+        .form-input {
+            width: 100%;
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            padding: 14px;
+            border-radius: 10px;
+            outline: none;
+            color: #1F2937;
+            margin-bottom: 18px;
+            transition: 0.2s;
+        }
+
+        .form-input::placeholder {
+            color: #64748b;
+        }
+
+        .form-input:focus {
+            border-color: #3B82F6;
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.25);
+        }
+
+        /* Send Button */
+        .send-btn {
+            background: #3B82F6;
+            padding: 14px 32px;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: .3s;
+            display: inline-block;
+            color: white;
+        }
+
+        .send-btn:hover {
+            background: #2563EB;
+            transform: scale(1.05);
+        }
+
+        /* Back Button */
+        .back-btn {
+            border: 1px solid #94a3b8;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: .3s;
+            font-size: 14px;
+            color: #475569;
+        }
+
+        .back-btn:hover {
+            border-color: #3B82F6;
+            color: #3B82F6;
+        }
+
+        /* Header Glass */
+        .header-glass {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="fixed w-full z-50 header-glass">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-primary">Md Rakib Hossain</h1>
+
+            <a href="index.html" class="back-btn">← Back to Home</a>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="pt-28 pb-20 container mx-auto px-6">
+
+        <h2 class="text-4xl font-bold text-center mb-6 text-gray-800">
+            Contact Me
+        </h2>
+
+        <p class="text-gray-600 text-center mb-10">
+            Have a question or want to collaborate? Send me a message!
+        </p>
+
+        <div class="max-w-xl mx-auto glass-box">
+
+            <form action="#" method="POST">
+
+                <!-- Name -->
+                <input 
+                    type="text" 
+                    class="form-input"
+                    placeholder="Your Name"
+                    required>
+
+                <!-- Email -->
+                <input 
+                    type="email" 
+                    class="form-input"
+                    placeholder="Your Email Address"
+                    required>
+
+                <!-- Message -->
+                <textarea 
+                    class="form-input"
+                    rows="5"
+                    placeholder="Write your message here..."
+                    required></textarea>
+
+                <button type="submit" class="send-btn w-full text-center">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Rakib Hossain - Portfolio</title>
+    <meta name="description" content="Creative Developer & UI/UX Designer Portfolio">
+    <meta name="keywords" content="web developer, portfolio, designer, frontend">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Tailwind Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#3B82F6",
+                        secondary: "#1F2937",
+                        accent: "#10B981",
+                        dark: "#111827",
+                        "dark-light": "#1F2937"
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* LIGHT BACKGROUND */
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to bottom, #E0F2FF, #FFFFFF);
+            color: #1F2937;
+            overflow-x: hidden;
+        }
+
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(135deg, #3B82F6 0%, #10B981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Light Glass Effect */
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .skill-bar {
+            transition: width 1.5s ease-in-out;
+        }
+
+        .project-card {
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen">
+
+    <!-- Navigation -->
+    <header class="fixed w-full z-50 glass-effect">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+
+                <div class="text-2xl font-bold gradient-text">Md Rakib Hossain</div>
+
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-black font-medium">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-black font-medium">About</a>
+                    <a href="#skills" class="text-gray-700 hover:text-black font-medium">Skills</a>
+                    <a href="project.html" class="text-gray-700 hover:text-black font-medium">Projects</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-black font-medium">Contact</a>
+                </div>
+
+                <button class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-24 bg-white/80">
+        <div class="container mx-auto px-6 py-12">
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                <!-- Left Text -->
+                <div class="space-y-6">
+
+                    <h1 class="text-5xl md:text-6xl font-bold leading-tight">
+                        Hi, I'm <span class="gradient-text">Md Rakib Hossain</span>
+                    </h1>
+
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        A passionate <span class="text-primary font-semibold">Frontend Developer</span> and
+                        <span class="text-accent font-semibold">UI/UX Designer</span> creating beautiful and user-friendly digital experiences.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4 pt-6">
+                        <button class="bg-primary hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105">
+                            View My Work
+                        </button>
+                    </div>
+
+                    <!-- Social Icons -->
+                    <div class="flex space-x-6 pt-8">
+                        <a href="#" class="text-gray-600 hover:text-primary"><i class="fab fa-linkedin text-2xl"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-primary"><i class="fab fa-github text-2xl"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-primary"><i class="fab fa-twitter text-2xl"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-primary"><i class="fab fa-dribbble text-2xl"></i></a>
+                    </div>
+
+                </div>
+
+                <!-- Floating Background Circles -->
+                <div class="relative">
+                    <div class="absolute -top-6 -right-6 w-24 h-24 bg-primary rounded-full animate-pulse-slow opacity-30"></div>
+                    <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-accent rounded-full animate-pulse-slow opacity-30"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800">About Me</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                <div>
+                    <img src="demo.jpg" alt="About" class="w-full rounded-2xl shadow-xl" loading="lazy"/>
+                </div>
+
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-semibold text-gray-800">Crafting Digital Excellence</h3>
+
+                    <p class="text-gray-700 leading-relaxed">
+                        With over 5 years of experience in web development and design, I build responsive,
+                        user-friendly websites and apps that look stunning and perform exceptionally.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 pt-4">
+
+                        <div class="space-y-2">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 bg-primary rounded-full"></div>
+                                <span class="font-medium text-gray-800">Frontend Development</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 bg-accent rounded-full"></div>
+                                <span class="font-medium text-gray-800">UI/UX Design</span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 bg-primary rounded-full"></div>
+                                <span class="font-medium text-gray-800">Responsive Design</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 bg-accent rounded-full"></div>
+                                <span class="font-medium text-gray-800">Performance</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-all">
+                        Learn More About Me
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="container mx-auto px-6">
+
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800">My Skills</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Skill Card 1 -->
+                <div class="glass-effect p-6 rounded-2xl skill-card opacity-0 translate-y-8 transition-all duration-700">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                            <i class="fab fa-html5 text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Frontend</h3>
+                    </div>
+
+                    <p class="text-gray-700 mb-4">HTML5, CSS3, JavaScript, React, Vue.js, TypeScript</p>
+
+                    <div class="space-y-4">
+
+                        <div>
+                            <div class="flex justify-between text-sm text-gray-800">
+                                <span>HTML/CSS</span> <span>95%</span>
+                            </div>
+                            <div class="w-full bg-gray-300 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full skill-bar" data-width="95%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-sm text-gray-800">
+                                <span>JavaScript</span> <span>90%</span>
+                            </div>
+                            <div class="w-full bg-gray-300 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full skill-bar" data-width="90%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-sm text-gray-800">
+                                <span>React</span> <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-300 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full skill-bar" data-width="85%"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Skill Card 2 -->
+                <div class="glass-effect p-6 rounded-2xl skill-card opacity-0 translate-y-8 transition-all duration-700">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
+                            <i class="fas fa-palette text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Design</h3>
+                    </div>
+
+                    <p class="text-gray-700 mb-4">Figma, Adobe XD, Photoshop, Illustrator, UI/UX Principles</p>
+
+                    <div class="space-y-4">
+
+                        <div>
+                            <div class="flex justify-between text-sm text-gray-800">
+                                <span>UI/UX Design</span> <span>88%</span>
+                            </div>
+                            <div class="w-full bg-gray-300 rounded-full h-2">
+                                <div class="bg-accent h-2 rounded-full skill-bar" data-width="88%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-sm text-gray-800">
+                                <span>Figma</span> <span>92%</span>
+                            </div>
+                            <div class="w-full bg-gray-300 rounded-full h-2">
+                                <div class="bg-accent h-2 rounded-full skill-bar" data-width="92%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-sm text-gray-800">
+                                <span>Prototyping</span> <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-300 rounded-full h-2">
+                                <div class="bg-accent h-2 rounded-full skill-bar" data-width="85%"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Skill Card 3 -->
+                <div class="glass-effect p-6 rounded-2xl skill-card opacity-0 translate-y-8 transition-all duration-700">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                            <i class="fas fa-tools text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Tools</h3>
+                    </div>
+
+                    <p class="text-gray-700 mb-4">Git, Webpack, VS Code, Chrome DevTools, Terminal</p>
+
+                    <div class="space-y-4">
+
+                        <div>
+                            <div class="flex justify-between text-sm text-gray-800">
+                                <span>Git</span> <span>90%</span>
+                            </div>
+                            <div class="w-full bg-gray-300 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full skill-bar" data-width="87%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-sm text-gray-800">
+                                <span>VS Code</span> <span>94%</span>
+                            </div>
+                            <div class="w-full bg-gray-300 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full skill-bar" data-width="94%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-sm text-gray-800">
+                                <span>DevTools</span> <span>96%</span>
+                            </div>
+                            <div class="w-full bg-gray-300 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full skill-bar" data-width="89%"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Skill Animation Script -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.remove("opacity-0", "translate-y-8");
+
+                    const bars = entry.target.querySelectorAll(".skill-bar");
+                    bars.forEach(bar => {
+                        bar.style.width = bar.getAttribute("data-width");
+                    });
+                }
+            });
+        }, { threshold: 0.4 });
+
+        document.querySelectorAll(".skill-card").forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+
+</body>
+</html>
